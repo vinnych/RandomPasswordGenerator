@@ -1,0 +1,52 @@
+/* style.css */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+.container {
+    max-width: 500px;
+    width: 100%;
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+/* Custom styling for the message box */
+#messageBox {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem;
+    position: fixed;
+    z-index: 100;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    font-size: 0.875rem;
+    opacity: 0;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+}
+#messageBox.show {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+/* Password strength bar colors */
+.strength-weak {
+    background-color: #ef4444; /* red-500 */
+}
+.strength-medium {
+    background-color: #f97316; /* orange-500 */
+}
+.strength-strong {
+    background-color: #22c55e; /* green-500 */
+}
